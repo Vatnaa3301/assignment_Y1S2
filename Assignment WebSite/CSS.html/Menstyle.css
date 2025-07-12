@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Jost", sans-serif;
+  background-color: #f4f4f4;
+}
+header .navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar nav .menu ul {
+  display: flex;
+  list-style: none;
+}
+header .navbar nav .menu ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 8px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+header .navbar nav .menu ul li a:hover {
+  color: gray;
+}
+header .navbar .logo img {
+  width: 70px;
+  height: auto;
+}
+header .navbar .menu2 ul {
+  display: flex;
+  list-style: none;
+}
+header .navbar .menu2 ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 8px;
+  font-size: 12px;
+  transition: 0.3s;
+}
+header .navbar nav .menu2 ul li a:hover {
+  color: gray;
+}
+/* hero */
+main .hero .banner1 img {
+  width: 100%;
+  height: auto;
+}
+/* Add to your style.css */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 350px; /* adjust as needed */
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+main .hero .discript {
+  text-align: center;
+  font-size: 14px;
+  padding: 30px;
+  line-height: 1.7;
+
+}
+/* section:product MEN Watch */
+main .productCard{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+main .productCard .product {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+main .productCard .product:hover{
+  transition: transform 0.3s;
+  transform: scale(1.1);
+}
+main .productCard .product img {
+  width: 70%;
+}
+main .container .productinfo {
+    display: grid ;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    gap: 5px;
+}
+main .container .productinfo .discriptBaner2 {
+  line-height: 1.7;
+  font-size: 14px;
+  padding: 20px;
+}
+/* section */
+main .container .productinfo {
+    display: grid ;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    gap: 5px;
+}
+main .container .productinfo .banner2 img{
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: rgba(128, 128, 128, 0.401) 0px 0px 10px;
+}
+/* MEN COLLECTION */
+main .container .discript {
+  text-align: center;
+  font-size: 35px;
+}
+/* FOOTER */
+footer .container{
+    border: grey solid 0.50px;
+    background-color: #f4f4f4;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+footer .container .logo img {
+    width: 90px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* slider for product */
+.slider2-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+.slider2 {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+.slider2::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+.product {
+  min-width: 220px;
+  max-width: 250px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s;
+  flex: 0 0 auto;
+}
+.product:hover {
+  transform: scale(1.05);
+}
+.product-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.slider2-arrow {
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+  transition: background 0.2s;
+  margin: 0 8px;
+  user-select: none;
+}
+.slider2-arrow:hover {
+  background: #eee;
+}
+@media (max-width: 900px) {
+  .product {
+    min-width: 180px;
+    max-width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .slider2-wrapper {
+    padding: 0 10px;
+  }
+  .product {
+    min-width: 140px;
+    max-width: 160px;
+    padding: 10px;
+  }
+  .product-image img {
+    height: 100px;
+  }
+}
+/* end of product slider */
