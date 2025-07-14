@@ -27,8 +27,9 @@ header .navbar nav .menu ul li a:hover {
   color: gray;
 }
 header .navbar .logo img {
-  width: 70px;
+  width: 80px;
   height: auto;
+  margin-right: 200px;
 }
 header .navbar .menu2 ul {
   display: flex;
@@ -74,11 +75,59 @@ main .hero .discript {
   line-height: 1.7;
 }
 /* Category Grid */
+.category-slider-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+.category-slider {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.category-slider::-webkit-scrollbar {
+  display: none;
+}
+.category-slider-arrow {
+  background: #fff;
+  border: 2px solid #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  user-select: none;
+  color: #333;
+}
+.category-slider-arrow:hover {
+  background: #333;
+  color: white;
+  transform: scale(1.1);
+}
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   padding: 20px 0;
+}
+
+/* Category Slider Styles */
+.category-slider .category-card {
+  min-width: 350px;
+  max-width: 400px;
+  flex: 0 0 auto;
+  margin-right: 30px;
 }
 .category-card {
   background: white;
@@ -86,6 +135,7 @@ main .hero .discript {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 .category-card:hover {
   transform: translateY(-5px);
@@ -298,6 +348,10 @@ footer .container .logo img {
     min-width: 180px;
     max-width: 200px;
   }
+  .category-slider .category-card {
+    min-width: 280px;
+    max-width: 320px;
+  }
   .category-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -319,6 +373,10 @@ footer .container .logo img {
   .product-image img {
     height: 100px;
   }
+  .category-slider .category-card {
+    min-width: 250px;
+    max-width: 280px;
+  }
   .category-grid {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -331,6 +389,114 @@ footer .container .logo img {
   }
 }
 /* end of product slider */
+
+/* About Us Page Styles */
+.about-content {
+  padding: 60px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin: 40px 0 20px 0;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.value-item {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.value-item h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.value-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-info {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.contact-item {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.contact-item strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+  .about-text h2 {
+    font-size: 2rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .about-content {
+    padding: 40px 20px;
+  }
+}
 
 
 
